@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from os import environ
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -17,7 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'to06h81zec&)ylyp2wdv#r4_75)5&(d@y%*^*mu-c+t0z^0e$b'
+SECRET_KEY = os.environ.get('PERSONAL_EMAIL')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
